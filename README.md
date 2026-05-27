@@ -1,4 +1,4 @@
-# 🚀 Agentflow AI — Agentic AI Automation Platform.Leading AgenticAI
+# 🚀 Agentflow AI — Agentic AI Automation Platform
 
 <div align="center">
 
