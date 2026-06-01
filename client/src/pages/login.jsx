@@ -74,6 +74,9 @@ export default function LoginPage() {
             Create an account
           </Link>
         </p>
+        <div className="mt-6 border-t border-slate-100 pt-4 text-center text-xs text-slate-400">
+          Made with ❤️ by <span className="font-semibold text-slate-500">Sai Rohith</span>
+        </div>
       </section>
     </main>
   );
