@@ -43,33 +43,39 @@ export default function AppShell({ title, children }) {
 
   return (
     <div className="min-h-screen bg-panel">
-      <aside className="fixed inset-y-0 left-0 hidden w-64 border-r border-slate-200 bg-white px-4 py-5 lg:block">
-        <Link href="/dashboard" className="flex items-center gap-2 text-lg font-semibold text-ink">
-          <span className="flex h-9 w-9 items-center justify-center rounded bg-brand text-sm font-bold text-white">
-            AI
-          </span>
-          Agentflow_AI
-        </Link>
+      <aside className="fixed inset-y-0 left-0 hidden w-64 border-r border-slate-200 bg-white px-4 py-5 lg:flex lg:flex-col lg:justify-between">
+        <div>
+          <Link href="/dashboard" className="flex items-center gap-2 text-lg font-semibold text-ink">
+            <span className="flex h-9 w-9 items-center justify-center rounded bg-brand text-sm font-bold text-white">
+              AI
+            </span>
+            Agentflow_AI
+          </Link>
 
-        <nav className="mt-8 space-y-1">
-          {navItems.map((item) => {
-            const Icon = item.icon;
-            const active = router.pathname === item.href;
+          <nav className="mt-8 space-y-1">
+            {navItems.map((item) => {
+              const Icon = item.icon;
+              const active = router.pathname === item.href;
 
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`flex items-center gap-3 rounded px-3 py-2 text-sm font-medium ${
-                  active ? 'bg-blue-50 text-brand' : 'text-slate-600 hover:bg-slate-50 hover:text-ink'
-                }`}
-              >
-                <Icon className="h-4 w-4" />
-                {item.label}
-              </Link>
-            );
-          })}
-        </nav>
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`flex items-center gap-3 rounded px-3 py-2 text-sm font-medium ${
+                    active ? 'bg-blue-50 text-brand' : 'text-slate-600 hover:bg-slate-50 hover:text-ink'
+                  }`}
+                >
+                  <Icon className="h-4 w-4" />
+                  {item.label}
+                </Link>
+              );
+            })}
+          </nav>
+        </div>
+
+        <div className="border-t border-slate-150 pt-4 text-center text-xs text-slate-400">
+          Made with ❤️ by <span className="font-semibold text-slate-500">Sai Rohith</span>
+        </div>
       </aside>
 
       <div className="lg:pl-64">
